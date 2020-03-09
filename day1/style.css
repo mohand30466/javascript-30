@@ -1,6 +1,15 @@
 
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://cdn2.vectorstock.com/i/1000x1000/48/76/shiny-star-background-design-vector-874876.jpg");
+    
+    background-size: cover;
+
+}
 .keys{
     display: flex;
+    flex: 1;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
@@ -28,8 +37,12 @@ kbd{
     font-size: 40px;
     display:block;
 }
-/* .sound{
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1rem;
-} */
+
+  
+  .sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+  }
+   

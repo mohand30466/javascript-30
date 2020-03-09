@@ -17,8 +17,9 @@ window.addEventListener("keydown", function(e){
     audio.currentTime = 0
 
     audio.play();
-    // console.log(key)
+    key.classlist.add('playing')
+    key.remove(playing)
+    this.setTimeout(function(){
 
-    // key.addclasslist(playing)
-    // key.remove(playing)
+    },0.07)
 })
