@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      const info = [
+        { fname: "mohand", lname: "abdo", year: 1929, passed: 2020 },
+        { fname: "moshi", lname: "over", year: 1389, passed: 2016 },
+        { fname: "adam", lname: "john", year: 1289, passed: 2011 },
+        { fname: "naty", lname: "orey", year: 1581, passed: 2119 },
+        { fname: "lio", lname: "adam", year: 1782, passed: 2011},
+        { fname: "eido", lname: "dani", year: 1689, passed: 2008 },
+        { fname: "matan", lname: "etsic", year: 1889, passed: 2002 },
+        { fname: "levy", lname: "solamin", year: 1729, passed: 2010 }
+      ];
+      const year = info.filter(
+        person => person.year >= 1700 && person.year < 1800
+      );
+      console.table(year);
+
+      const name = info.map(persons => `${persons.fname}  ${persons.lname}`)
+      console.table(name)
+
+      const order = info.sort((a, b)=> a.year > b.year? 1 : -1)
+      console.table(order)
+
+      const totalYear = info.reduce((total, person) => total= person.year - person.passed )
+      console.table(totalYear)
+
+
+      const oldperson = info.sort((a, b)=> {
+         const oldestperson = a.year - a.passed
+         const youngestperson = b.year - b.passed
+         return oldestperson > youngestperson? 1 : -1;
+
+      })
+      console.table(oldperson)
+      
+    </script>
+  </body>
+</html>
