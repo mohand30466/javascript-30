@@ -1,0 +1,15 @@
+
+.panels{
+    display: flex;
+    background-color:yellow;
+    color: white;
+    height: 100vh;
+}
+
+.panel{
+   background: purple;
+   color: white;
+   text-align: center;
+   align-items: center;
+
+}

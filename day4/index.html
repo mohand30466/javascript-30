@@ -5,8 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array</title>
   </head>
-  <body>
+  <div class="container">
+    <a href="#">Channel</a>
+    <a href="#">Chatter</a>
+    <a href="#">Debo</a>
+    <a href="#">Chanctel</a>
+    <a href="#">Lolo</a>
+    <a href="#">Lors</a>
+    <a href="#">Chaaaa</a>
+    <a href="#">Chit</a>
+    <a href="#">Pini</a>
+    <a href="#">Muhand</a>
+  </div>
+  <body>  
     <script>
+     const container =  document.querySelector(".container");
+     const a = container.querySelectorAll("a");
+     const y = Array.from(a)
+
+    //  filter
+    //  1) It loops over the Array
+    //  2) it returns you a new Array
+    //  3) it gives you an if statment out of the box
+
+    const myFilter =  y.filter(tag => tag.text.toLowerCase().includes("ch"))
+     console.log(myFilter);
+     
+     
+     console.log(y);
+
+     const z = new Array(a)
+     console.log(z);
+     
+
+     
+
+     
+     
+
       const info = [
         { fname: "mohand", lname: "abdo", year: 1929, passed: 2020 },
         { fname: "moshi", lname: "over", year: 1389, passed: 2016 },
@@ -28,8 +64,16 @@
       const order = info.sort((a, b)=> a.year > b.year? 1 : -1)
       console.table(order)
 
-      const totalYear = info.reduce((total, person) => total= person.year - person.passed )
+      const totalYear = info.reduce((total, person) => total = person.year - person.passed )
       console.table(totalYear)
+      const numbers = [124,56,66,45,6,55];
+      const x = numbers.reduce((acc,val) => {
+       return  acc + val
+      },5)
+      console.log("reduce",x);
+      
+      
+
 
 
       const oldperson = info.sort((a, b)=> {
